@@ -8,7 +8,6 @@ import {
 } from "react-native";
 import React, { useState, useRef } from "react";
 import CHeader from "../../components/CHeader";
-import { title } from "../../global/styles";
 import * as Animatable from "react-native-animatable";
 import { Icon } from "react-native-elements";
 
