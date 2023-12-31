@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Dimensions } from "react-native";
 import { colors, parameters } from "../global/styles";
 import { Icon } from "react-native-elements";
 
-export default function CHeader({ title, type }) {
+export default function CHeader({ title, type, navigation }) {
   return (
     <View style={styles.header}>
       <View style={styles.rapper}>
@@ -13,7 +13,9 @@ export default function CHeader({ title, type }) {
             name={type}
             color={colors.headerText}
             size={38}
-            onPress={() => {}}
+            onPress={() => {
+              navigation.goBack();
+            }}
           />
         </View>
         <View>
