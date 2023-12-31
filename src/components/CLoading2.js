@@ -1,6 +1,6 @@
-import { View, Image, StyleSheet } from "react-native";
+import { View, Image, StyleSheet, TouchableOpacity } from "react-native";
 
-function CLoading() {
+function CLoading2(navigation) {
   return (
     <View>
       <Image
@@ -23,12 +23,17 @@ function CLoading() {
           source={require("../../assets/on-boarding/right-arrow-imags.png")}
         />
       </View>
+      <view>
+        <TouchableOpacity onPress={() => navigation.navigate()}>
+          <Text style={{ fontSize: "bold" }}>Next</Text>
+        </TouchableOpacity>
+      </view>
     </View>
   );
 }
-
 const styles = StyleSheet.create({
   overlayImage: {},
+  backgroundImage: {},
 });
 
-export default CLoading;
+export default CLoading2;

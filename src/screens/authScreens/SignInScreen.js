@@ -11,13 +11,13 @@ import CHeader from "../../components/CHeader";
 import * as Animatable from "react-native-animatable";
 import { Icon } from "react-native-elements";
 
-export default function SignInScreen() {
+export default function SignInScreen(navigation) {
   const [textInput2Fossued, setTextInput2Foscued] = useState(false);
   const textInput1 = useRef(1);
   const textInput2 = useRef(2);
   return (
     <View>
-      <CHeader title="MyACCOUNT" type="arrow-left" />
+      <CHeader title="MyACCOUNT" type="arrow-left" navigation={navigation} />
       {/* <View style={{ marginLeft: 20, marginTop: 10 }}>
         <Text style={title}>SignUp</Text>
       </View> */}
@@ -79,7 +79,11 @@ export default function SignInScreen() {
       </View>
 
       {/* login button */}
-      <TouchableOpacity onPress={() => {}}>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigator("HomeScreen");
+        }}
+      >
         <View
           style={[styles.button, { backgroundColor: "#23F311", marginTop: 10 }]}
         >

@@ -11,6 +11,7 @@ function App() {
         backgroundColor={colors.statusbar}
       />
       <RootNavigator />
+      {/* <Text> can you here me </Text> */}
     </View>
   );
 }
